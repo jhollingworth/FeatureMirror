@@ -1,0 +1,16 @@
+h1. Feature Mirror
+
+As part of a <a href="http://jhollingworth.com/?p=135">project I worked on</a>, we needed to have features of the web application in separate solutions to the main application. To make development with this approach as painless as possible I developed a visual studio plugin which mirrors files from each feature solution to the master solution.
+
+h2. How to use it 
+
+Firstly, you will need to copy the FeatureMirror.AddIn and FeatureMirror.dll into My Documents\Visual studio 2008\Addins\. Next you need to add a feature.yml file (normal yaml file) which contains one field, destination, which is a relative path from the feature.yml file to the destination of all files.
+
+e.g.
+
+<pre>
+destination: "..\..\..\master_app\"
+</pre>
+
+If you are using this in conjuction with the <a href="http://github.com/jhollingworth/Seabass/wiki/Features">feature packaging & consumer commands in seabass</a> you would also put the feature name and destination name in here as well. 
+Whenever you open a solution which has a project that contains a feature.yml file it will firstly copy all valid file's to the configured destination. A file is considered valid if it has the correct file type (currently aspx, ascx, js, css, png, gif and dll's) and there is a feature.yml file in the directory or within a directory at most 3 levels above it. It will also instantiate a file system watcher which will copy any valid files to their destination whenever a change is made to them. If the file mirroring gets out of sync you can also right click in an C# window and copy the feature from there.

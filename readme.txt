@@ -1,0 +1,1 @@
+To install, copy the contents of /install into \Documents\Visual Studio 2008\Addins
