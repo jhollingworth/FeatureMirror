@@ -4,7 +4,7 @@ As part of a <a href="http://jhollingworth.com/?p=135">project I worked on</a>, 
 
 h2. How to use it 
 
-Firstly, you will need to copy the FeatureMirror.AddIn and FeatureMirror.dll into My Documents\Visual studio 2008\Addins\. Next you need to add a feature.yml file (normal yaml file) which contains one field, destination, which is a relative path from the feature.yml file to the destination of all files.
+Firstly, you will need to copy the FeatureMirror.AddIn and FeatureMirror.dll into My Documents\Visual studio 2008\Addins\ (At the moment only Visual Studio 2008). Next you need to add a feature.yml file (normal yaml file) which contains one field, destination, which is a relative path from the feature.yml file to the destination of all files.
 
 e.g.
 
